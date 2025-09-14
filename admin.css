@@ -1,0 +1,253 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+
+header {
+    background: #007bff;
+    color: #fff;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    transition: background 0.3s, padding 0.3s;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo {
+    height: 50px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.header-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.header-buttons a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    background-color: #0056b3;
+    transition: background-color 0.3s;
+}
+
+.header-buttons a:hover {
+    background-color: #00408b;
+}
+
+
+main {
+    margin-top: 70px; 
+    padding: 20px;
+}
+
+.booking-container {
+    max-width: 500px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo-icon {
+    display: block;
+    margin: 0 auto;
+    height: 100px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.forgot-password {
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+.forgot-password a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.forgot-password a:hover {
+    text-decoration: underline;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 16px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.links {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.links p {
+    margin-bottom: 10px;
+}
+
+
+footer {
+    background: #007bff;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.bus-icon {
+    height: 50px;
+    display: block;
+    margin: 0 auto;
+}
+
+.copyright {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+
+.moon, .sun {
+    position: fixed;
+    width: 100px;
+    height: 100px;
+    background-size: cover;
+    z-index: 10;
+    pointer-events: none;
+}
+
+.moon {
+    background-image: url('moon.png'); 
+    top: 10%;
+    left: 10%;
+}
+
+.sun {
+    background-image: url('sun.png'); 
+    top: 10%;
+    right: 10%;
+}
+
+.cloud-container {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.clouds {
+    background: url('cloud.png'); 
+    background-size: cover;
+    position: absolute;
+    width: 150px;
+    height: 100px;
+    opacity: 0.5;
+}
+
+.cloud1 {
+    top: 20%;
+    left: 10%;
+    animation: moveCloud1 60s linear infinite;
+}
+
+.cloud2 {
+    top: 40%;
+    right: 20%;
+    animation: moveCloud2 80s linear infinite;
+}
+
+.cloud3 {
+    top: 60%;
+    left: 30%;
+    animation: moveCloud3 100s linear infinite;
+}
+
+@keyframes moveCloud1 {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+@keyframes moveCloud2 {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+
+@keyframes moveCloud3 {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+
+header.shrink {
+    background: #0056b3;
+    padding: 5px 0;
+}

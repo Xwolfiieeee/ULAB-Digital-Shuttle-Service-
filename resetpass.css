@@ -1,0 +1,123 @@
+/* General Body and Layout Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #e0f7fa, #ffffff);
+    color: #333;
+    text-align: center;
+}
+
+/* Header Styles */
+header {
+    background-color: #004b49;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    width: 150px;
+    animation: fadeIn 2s ease-in;
+}
+
+/* Main Container Styles */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 100px); /* Adjust based on footer height */
+}
+
+.container {
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 40px;
+    max-width: 400px;
+    width: 100%;
+    animation: slideIn 1s ease-out;
+}
+
+h1 {
+    color: #004b49;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+/* Form Element Styles */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label {
+    font-weight: bold;
+    color: #00796b;
+}
+
+input[type="password"],
+input[type="submit"] {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+input[type="password"] {
+    transition: border-color 0.3s ease;
+}
+
+input[type="password"]:focus {
+    border-color: #004b49;
+    outline: none;
+}
+
+input[type="submit"] {
+    background-color: #004b49;
+    color: white;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Initial glow effect */
+}
+
+input[type="submit"]:hover {
+    background-color: #004d40;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5), 0 0 20px rgba(0, 0, 0, 0.3); /* Glowing effect on hover */
+}
+
+input[type="submit"]:active {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.7), 0 0 25px rgba(0, 0, 0, 0.5); /* Enhanced glow when clicked */
+}
+
+/* Footer Styles */
+footer {
+    background-color: #004b49;
+    color: white;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

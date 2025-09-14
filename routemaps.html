@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Route Maps - University</title>
+    <link rel="stylesheet" href="routemaps.css"> 
+    <script>
+        function showMap() {
+            var selectedRoute = document.getElementById("route-select").value;
+            var maps = document.getElementsByClassName("map");
+            
+            for (var i = 0; i < maps.length; i++) {
+                maps[i].style.display = 'none'; 
+            }
+            
+            if (selectedRoute) {
+                document.getElementById(selectedRoute).style.display = 'block'; 
+            }
+        }
+    </script>
+</head>
+<body>
+   
+    <img src="ulab-logo.png" alt="University Logo" class="university-logo">
+
+    <div class="container">
+        <h1>Route Maps</h1>
+        <p>Select a route to view the map:</p>
+        
+        
+        <select id="route-select" onchange="showMap()">
+            <option value="">Select Route</option>
+            <option value="dhanmondi-15">ULAB to Dhanmondi-15</option>
+            <option value="mirpur-10">ULAB to Mirpur-10</option>
+            <option value="polashi">ULAB to Polashi</option>
+        </select>
+
+     
+        <div id="dhanmondi-15" class="map" style="display: none;">
+            <img src="d.png" alt="ULAB to Dhanmondi-15">
+        </div>
+        <div id="mirpur-10" class="map" style="display: none;">
+            <img src="m.png" alt="ULAB to Mirpur-10">
+        </div>
+        <div id="polashi" class="map" style="display: none;">
+            <img src="p.png" alt="ULAB to Polashi">
+        </div>
+    </div>
+</body>
+</html>

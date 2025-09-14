@@ -1,0 +1,129 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+
+.university-logo {
+    display: block;
+    margin: 20px auto;
+    max-width: 150px;
+}
+
+
+.receipts-container {
+    width: 80%;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 40px;
+}
+
+
+.receipts-container h2 {
+    text-align: center;
+    color: #00416d;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+/* Search bar */
+#searchInput {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+
+#receiptsTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+#receiptsTable th, #receiptsTable td {
+    border: 1px solid #ccc;
+    padding: 12px;
+    text-align: left;
+}
+
+#receiptsTable th {
+    background-color: #00416d;
+    color: white;
+}
+
+#receiptsTable tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+#receiptsTable tr:hover {
+    background-color: #f1f1f1;
+    cursor: pointer;
+}
+
+
+.receipt-container {
+    display: none;
+    background-color: #fefefe;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: 20px auto;
+}
+
+.receipt-container h3 {
+    text-align: center;
+    color: #333;
+}
+
+.receipt-container p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.receipt-container button {
+    background-color: #00416d;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    display: block;
+    margin: 20px auto 0;
+}
+
+.receipt-container button:hover {
+    background-color: #005580;
+}
+
+
+.confirmation-message {
+    display: none;
+    text-align: center;
+    color: green;
+    font-size: 16px;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+
+@media (max-width: 768px) {
+    .receipts-container, .receipt-container {
+        width: 95%;
+    }
+
+    #receiptsTable th, #receiptsTable td {
+        padding: 8px;
+    }
+}

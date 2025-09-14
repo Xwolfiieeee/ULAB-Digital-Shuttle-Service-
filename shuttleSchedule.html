@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ULAB Shuttle Service Schedule</title>
+    <link rel="stylesheet" href="shuttleSchedule.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <img src="ulab-logo.png" alt="ULAB Logo" class="logo">
+            <h1>ULAB Shuttle Service Schedule</h1>
+        </div>
+    </header>
+
+    <main>
+        <section class="shuttle-schedule">
+            <h2>Select Your Route</h2>
+
+            
+            <div class="route-buttons">
+                <button class="route-button" onclick="showSchedule('palashi')">Palashi to ULAB</button>
+                <button class="route-button" onclick="showSchedule('mirpur10')">Mirpur 10 to ULAB</button>
+                <button class="route-button" onclick="showSchedule('dhanmondi')">Dhanmondi to ULAB</button>
+            </div>
+
+            
+            <div id="palashiSchedule" class="schedule-table">
+                <h3>Route:ULAB to Palashi</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Stoppages</th>
+                            <th>1st Trip (Pick up Time)</th>
+                            <th>2nd Trip (Pick up Time)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Palashi Circle (In Front of DBBL)</td>
+                            <td>7:10 AM</td>
+                            <td>11:00 AM</td>
+                        </tr>
+                        <tr>
+                            <td>Azimpur Bus Stand</td>
+                            <td>7:15 AM</td>
+                            <td>11:05 AM</td>
+                        </tr>
+                        <tr>
+                            <td>Labaid Bus Stand (In Front of alliance francaise)</td>
+                            <td>7:20 AM</td>
+                            <td>11:10 AM</td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+
+                <h3>Route: Palashi to ULAB</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Stoppages</th>
+                            <th>1st Trip (Drop off Time)</th>
+                            <th>2nd Trip (Drop off Time)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>ULAB (Departure)</td>
+                            <td>9:30 AM</td>
+                            <td>6:00 PM</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+           
+            <div id="mirpur10Schedule" class="schedule-table">
+                <h3>Route: ULAB to Mirpur-10 </h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Stoppages</th>
+                            <th>1st Trip (Pick up Time)</th>
+                            <th>2nd Trip (Pick up Time)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Mirpur 10 Circle (In front of BATA)</td>
+                            <td>7:10 AM</td>
+                            <td>11:30 AM</td>
+                        </tr>
+                        <tr>
+                            <td>Mirpur 1 -Sony Cinema Hall (In front of BRAC Bank)</td>
+                            <td>7:15 AM</td>
+                            <td>11:35 AM</td>
+                        </tr>
+                        <tr>
+                            <td>Ansar Camp Bus Stand</td>
+                            <td>7:20 AM</td>
+                            <td>11:40 AM</td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+
+                <h3>Route: Mirpur-10 to ULAB</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Stoppages</th>
+                            <th>1st Trip (Drop off Time)</th>
+                            <th>2nd Trip (Drop off Time)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>ULAB (Departure)</td>
+                            <td>9:40 AM</td>
+                            <td>6:00 PM</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            
+            <div id="dhanmondiSchedule" class="schedule-table">
+                <h3>Route: ULAB to Dhanmondi </h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Stoppages</th>
+                            <th>1st Trip (Pick up Time)</th>
+                            <th>2nd Trip (Pick up Time)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Dhanmondi 27-West (In Front of Bangladesh Eye Hospital)</td>
+                            <td>7:35 AM</td>
+                            <td>11:25 AM</td>
+                        </tr>
+                        <tr>
+                            <td>Kalabagan Bus Stand</td>
+                            <td>7:25 AM</td>
+                            <td>11:15 AM</td>
+                        </tr>
+                        <tr>
+                            <td>Sobhanbagh Masjid (In Front of Plaza AR)</td>
+                            <td>7:30 AM</td>
+                            <td>11:20 AM</td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+
+                <h3>Route: Dhanmondi-15 to ULAB</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Stoppages</th>
+                            <th>1st Trip (Drop off Time)</th>
+                            <th>2nd Trip (Drop off Time)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>ULAB (Departure)</td>
+                            <td>9:50 AM</td>
+                            <td>6:10 PM</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 ULAB. All Rights Reserved.</p>
+    </footer>
+
+    
+    <script>
+        function showSchedule(route) {
+            
+            var schedules = document.querySelectorAll('.schedule-table');
+            schedules.forEach(function(schedule) {
+                schedule.style.display = 'none';
+            });
+
+            
+            if (route === 'palashi') {
+                document.getElementById("palashiSchedule").style.display = "block";
+            } else if (route === 'mirpur10') {
+                document.getElementById("mirpur10Schedule").style.display = "block";
+            } else if (route === 'dhanmondi') {
+                document.getElementById("dhanmondiSchedule").style.display = "block";
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,149 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url('sky.png'); 
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+
+
+.header-container {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+    width: 100%;
+    max-width: 1200px;
+    margin-bottom: 40px;
+}
+
+.logo {
+    width: 80px; 
+    vertical-align: middle;
+}
+
+h1 {
+    display: inline-block;
+    margin-left: 10px;
+    vertical-align: middle;
+    color: #333;
+    font-size: 28px;
+    transition: color 0.3s ease;
+}
+
+h1:hover {
+    color: #007bff;
+}
+
+
+.shuttle-schedule {
+    padding: 30px;
+    max-width: 900px;
+    margin: 40px auto;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transform: translateY(-20px);
+    animation: slideIn 1s forwards ease-out;
+}
+
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.route-buttons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.route-button {
+    padding: 12px 25px;
+    margin: 0 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.route-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05); 
+}
+
+.route-button:active {
+    transform: scale(0.98); 
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+th, td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: center;
+    font-size: 16px;
+}
+
+th {
+    background-color: #007bff;
+    color: white;
+}
+
+td {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+
+.schedule-table {
+    display: none; 
+    margin-top: 20px;
+    text-align: center;
+}
+
+
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-top: 1px solid #ddd;
+    margin-top: 20px;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+    color: #333;
+    transition: all 0.3s ease-in;
+}
+
+footer:hover {
+    background-color: #007bff;
+    color: white;
+    transition: all 0.3s ease-in;
+}
